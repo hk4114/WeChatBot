@@ -1,27 +1,3 @@
-# WeChatRobot
-> https://github.com/lich0821/WeChatRobot
-
-## 环境准备
-- python v3.11.9
-- vscode
-
-```sh
-git clone https://github.com/lich0821/WeChatRobot.git
-# 升级 pip
-python -m pip install -U pip
-# 安装必要依赖
-pip install -r requirements.txt
-# ChatGLM 还需要安装一个 kernel
-ipython kernel install --name chatglm3 --user
-```
-
-## 安装微信
-- [微信 3.9.2.23](https://github.com/lich0821/WeChatFerry/releases/latest)
-
-安装依赖 `Pymem`，`pip install pymem`。
-
-新建文件 `mock.py`
-```py
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -59,17 +35,3 @@ if __name__ == "__main__":
         fix_version(pm)
     except Exception as e:
         print(f"{e}，请确认微信程序已经打开！")
-```
-
-运行微信，执行脚本 `python mock.py`
-
-登录微信。
-
-## 运行机器人
-执行两次 `python main.py`。在文件传输助手里有 `机器人启动成功！`则启动成功。
-
-## 接入 http 协议
-
-```sh
-pip3 install --upgrade wcfhttp -i https://mirrors.aliyun.com/pypi/simple/
-```
